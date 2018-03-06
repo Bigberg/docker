@@ -1,0 +1,53 @@
+version: '3'
+services:
+  # web server
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # app,挂在目录
+      - ./app/src:/usr/share/nginx/html
+      # ngnix configs
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
+      # certificates
+      - ./nginx/ca/server.crt/:/etc/nginx/server.crt:ro
+      - ./nginx/ca/server.key/:/etc/nginx/server.key:ro
+      - ./etc/localtime:/etc/localtime:ro
+    links:
+      - php:php-cgi
+
+  # PHP-FPM
+  php:
+    build: ./php-fpm
+    volumes:
+      - ./app/src:/usr/share/nginx/html
+      # php.ini
+      - ./php-fpm/php.ini:/usr/local/php/etc/php.ini:ro
+      - ./php-fpm/php-fpm.conf:/usr/local/php/etc/php-fpm.conf:ro
+      - ./php-fpm/www.conf:/usr/local/php/etc/php-fpm.d/www.conf:ro
+      - ./php-fpm/var:/usr/local/php/var
+      - ./etc/localtime:/etc/localtime:ro
+    links:
+      - mysql:mysql
+    ports:
+      - "9000:9000"
+    stdin_open: true
+    tty: true
+
+  # database
+  mysql:
+    image: mysql:latest
+    ports:
+      # Allow client to access 3306
+      - "3306:3306"
+    volumes:
+      # my.cnf
+      - ./mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf
+      # your data will be stored in ./mysql
+      - ./mysql/mysqldb:/var/lib/mysql
+      - ./etc/localtime:/etc/localtime:ro
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456

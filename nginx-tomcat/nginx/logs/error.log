@@ -1,0 +1,15 @@
+2018/03/06 16:56:23 [error] 5#0: *1 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:12:55 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:13:00 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:13:00 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:13:00 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:13:00 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:13:00 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:13:00 [error] 5#0: *3 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:15:17 [error] 5#0: *6 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:15:19 [error] 5#0: *10 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:19:36 [error] 5#0: *11 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:19:36 [error] 5#0: *11 open() "/usr/local/nginx/html/index.jsp" failed (2: No such file or directory), client: 172.16.200.109, server: localhost, request: "GET /index.jsp HTTP/1.1", host: "172.16.200.208"
+2018/03/06 17:33:54 [emerg] 1#0: getpwnam("nginx") failed in /usr/local/nginx/conf/nginx.conf:1
+2018/03/06 17:36:56 [emerg] 1#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /usr/local/nginx/conf/nginx.conf:12
+2018/03/06 17:39:30 [emerg] 1#0: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
